@@ -12,7 +12,7 @@ import org.apache.kafka.common.serialization.StringSerializer;
 
 public class Producer {
 	private static KafkaProducer<String, String> producer;
-	private static final String TOPIC = "topic6";
+	private static final String TOPIC = "topic1";
 	static {
 		Properties conf = new Properties();
 		// 如果是多个,就写成"192.168.1.1:9092,192.168.1.2:9092,192.168.1.3:9092"这样
@@ -29,9 +29,8 @@ public class Producer {
 		for (int i = 0; i < 100; i++) {
 			record = new ProducerRecord<String, String>(TOPIC, null, null, "value" + i);
 			send = producer.send(record); // 默认是异步发送
-			// Thread.sleep(1);
+			send.get();
 		}
-		send.get();
 		long end = System.currentTimeMillis();
 		System.out.println("耗费时间:" + (end - start));
 	}

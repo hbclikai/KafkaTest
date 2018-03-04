@@ -12,11 +12,10 @@ import kafka.javaapi.consumer.ConsumerConnector;
 import kafka.serializer.StringDecoder;
 import kafka.utils.VerifiableProperties;
 
-@SuppressWarnings("deprecation")
 public class OldConsumer {
 
 	private final ConsumerConnector consumer;
-	private final static String TOPIC = "topic8";
+	private final static String TOPIC = "topic3";
 
 	private OldConsumer() {
 		Properties props = new Properties();
@@ -53,9 +52,13 @@ public class OldConsumer {
 				keyDecoder, valueDecoder);
 		KafkaStream<String, String> stream = consumerMap.get(TOPIC).get(0);
 		ConsumerIterator<String, String> it = stream.iterator();
+		int count = 0;
 		while (it.hasNext()) {
 			// Thread.sleep(100);
 			System.out.println("<<" + it.next().message() + ">>");
+			// it.next();
+			count++;
+			System.out.println(count);
 		}
 	}
 
