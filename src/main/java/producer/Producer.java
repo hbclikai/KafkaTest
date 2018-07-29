@@ -15,7 +15,7 @@ public class Producer {
 	private static final String TOPIC = "topic1";
 	static {
 		Properties conf = new Properties();
-		// 如果是多个,就写成"192.168.1.1:9092,192.168.1.2:9092,192.168.1.3:9092"这样
+		// 多个,就写成"192.168.1.1:9092,192.168.1.2:9092,192.168.1.3:9092"这样
 		conf.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "192.168.159.150:9092");
 		conf.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
 		conf.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
