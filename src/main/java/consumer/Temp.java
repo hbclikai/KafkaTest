@@ -6,7 +6,11 @@ import java.util.Properties;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
-
+/**
+ * add from eclipse
+ * @author Administrator
+ *
+ */
 public class Temp {
 	public static void main(String[] args) {
 		Properties props = new Properties();
