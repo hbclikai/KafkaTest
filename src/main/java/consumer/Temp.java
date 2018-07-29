@@ -10,7 +10,7 @@ import org.apache.kafka.clients.consumer.KafkaConsumer;
 public class Temp {
 	public static void main(String[] args) {
 		Properties props = new Properties();
-		props.put("bootstrap.servers", "192.168.159.150:9092");
+		props.put("bootstrap.servers", "192.168.159.155:9092");
 		props.put("group.id", "test");
 		props.put("enable.auto.commit", "true");
 		props.put("auto.commit.interval.ms", "1000");
