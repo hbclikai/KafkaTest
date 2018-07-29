@@ -14,6 +14,7 @@ import org.apache.kafka.clients.consumer.KafkaConsumer;
  */
 public class Temp {
 	public static void main(String[] args) {
+		//part1
 		Properties props = new Properties();
 		props.put("bootstrap.servers", "192.168.159.155:9092");
 		props.put("group.id", "test");
