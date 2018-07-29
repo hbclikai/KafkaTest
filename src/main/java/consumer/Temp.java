@@ -8,6 +8,7 @@ import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 /**
  * add from eclipse
+ * add from idea
  * @author Administrator
  *
  */
