@@ -16,7 +16,7 @@ import org.apache.kafka.common.serialization.StringDeserializer;
  * 出处:http://blog.csdn.net/opensure/article/details/72419701
  * 在这个的基础上精简的
  * 经测试
- * 1)本段代码在断网的情况下仍能运行,在断网处会有几个重复消费的
+ * 1)本段代码在断网的情况下仍能运行,在断网处会有几个重复消费
  * 2)开启两个相同的本段代码,一个崩溃了,另一个自动运行,但是不能同时运行
  */
 public class ConsumerLoop implements Runnable {
